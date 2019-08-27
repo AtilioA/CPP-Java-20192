@@ -2,40 +2,33 @@
 #include <iostream>
 #include <string>
 
-class Pessoa
-{
+class Pessoa {
     public:
         std::string nome;
         std::string telefone;
 
-        Pessoa(std::string nome, std::string telefone)
-        {
+        Pessoa(std::string nome, std::string telefone) {
             this->nome = nome;
             this->telefone = telefone;
             std::cout << "Pessoa inicializada com sucesso." << std::endl;
         }
 
-        ~Pessoa()
-        {
+        ~Pessoa() {
             std::cout << "Pessoa liberada com sucesso." << std::endl;
         }
 
-        void imprime_pessoa()
-        {
+        void imprime_pessoa() {
             std::cout << "Nome: " << this->nome << "\nTel: " << this->telefone << std::endl;
         }
-        void imprime_nome()
-        {
+        void imprime_nome() {
             std::cout << "Nome: " << this->nome << std::endl;
         }
-        void imprime_telefone()
-        {
+        void imprime_telefone() {
             std::cout << "Tel: " << this->telefone << std::endl;
         }
 };
 
-int main()
-{
+int main() {
     Pessoa *renan, *henriquelay, *tiophil;
     renan = new Pessoa("Renan", "27");
     henriquelay = new Pessoa("Henrique", "99850");
