@@ -1,33 +1,8 @@
-#include <iostream>
 #include "Ex002.hpp"
+#include <iostream>
 
 using namespace std;
 
-class Turma
-{
-private:
-    /* data */
-public:
-    Turma(/* args */);
-    ~Turma();
-};
-
-Turma::Turma(/* args */)
-{
-}
-
-Turma::~Turma()
-{
-}
-
-class Professor
-{
-private:
-    /* data */
-public:
-    Professor(/* args */);
-    ~Professor();
-};
 
 Professor::Professor(/* args */)
 {
@@ -40,7 +15,10 @@ Professor::~Professor()
 class Matricula
 {
 private:
-    /* data */
+    int codigo;
+    // tm diaMatricula;
+    nota int;
+    string situacao;
 public:
     Matricula(/* args */);
     ~Matricula();
@@ -57,7 +35,7 @@ Matricula::~Matricula()
 class HorarioAula
 {
 private:
-    /* data */
+
 public:
     HorarioAula(/* args */);
     ~HorarioAula();
@@ -135,8 +113,6 @@ Serie::~Serie()
 class Aluno
 {
 private:
-    /* data */
-public:
     string matriculaInstituicao;
     int codigo;
     string CPF;
@@ -146,6 +122,7 @@ public:
     string email;
     string nome;
     static int qtdAlunos;
+public:
 
     Aluno(/* args */);
     ~Aluno();
@@ -166,8 +143,5 @@ Aluno::~Aluno()
 
 int main()
 {
-    Aluno teste;
-    teste.CPF = "1";
-    cout << teste.CPF << endl;
     return 0;
 }
