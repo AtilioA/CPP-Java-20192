@@ -3,15 +3,6 @@
 
 using namespace std;
 
-
-Professor::Professor(/* args */)
-{
-}
-
-Professor::~Professor()
-{
-}
-
 class Matricula
 {
 private:
@@ -107,37 +98,6 @@ Serie::Serie(/* args */)
 }
 
 Serie::~Serie()
-{
-}
-
-class Aluno
-{
-private:
-    string matriculaInstituicao;
-    int codigo;
-    string CPF;
-    string RG;
-    string endereco;
-    string telefone;
-    string email;
-    string nome;
-    static int qtdAlunos;
-public:
-
-    Aluno(/* args */);
-    ~Aluno();
-
-    void matricular(Turma t)
-    {
-
-    }
-};
-
-Aluno::Aluno(/* args */)
-{
-}
-
-Aluno::~Aluno()
 {
 }
 
