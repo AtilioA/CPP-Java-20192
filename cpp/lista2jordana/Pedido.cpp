@@ -12,7 +12,7 @@ Pedido::Pedido(Funcionario *fun, ItemDePedido *ped)
 
 Pedido::~Pedido()
 {
-    delete this->funcionario;
+    // delete this->funcionario;
     int tamItens = this->itens->size();
     for (int i = 0; i < tamItens; i++)
     {

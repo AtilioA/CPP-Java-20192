@@ -12,6 +12,16 @@ Produto::~Produto()
     cout << "Produto deletado." << endl;
 }
 
+int Produto::getCodigo()
+{
+    return this->codigo;
+}
+
+void Produto::setCodigo(int codigo)
+{
+    this->codigo = codigo;
+}
+
 string Produto::getNome()
 {
     return this->nome;

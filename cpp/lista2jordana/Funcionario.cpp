@@ -1,5 +1,15 @@
 #include "Funcionario.hpp"
 
+Funcionario::Funcionario()
+{
+    cout << "Funcionario criado." << endl;
+}
+
+Funcionario::~Funcionario()
+{
+    cout << "Funcionario deletado." << endl;
+}
+
 string Funcionario::getNome()
 {
     return this->nome;
@@ -15,9 +25,9 @@ tm Funcionario::getDataNascimento()
     return this->dataNascimento;
 }
 
-void setDataNascimento(tm dataNascimento)
+void Funcionario::setDataNascimento(tm dataNascimento)
 {
-    Funcionario::this->dataNascimento = dataNascimento;
+    this->dataNascimento = dataNascimento;
 }
 
 string Funcionario::getRG()
@@ -70,12 +80,12 @@ void Funcionario::setEmail(string email)
     this->email = email;
 }
 
-string getMatricula()
+string Funcionario::getMatricula()
 {
     return this->matricula;
 }
 
-void setMatricula(string matricula)
+void Funcionario::setMatricula(string matricula)
 {
     this->matricula = matricula;
 }

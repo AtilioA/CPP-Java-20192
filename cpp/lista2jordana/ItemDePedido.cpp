@@ -3,11 +3,13 @@
 ItemDePedido::ItemDePedido(Produto *produto)
 {
     this->produto = produto;
+    cout << "Item de pedido criado." << endl;
 }
 
 ItemDePedido::~ItemDePedido()
 {
     delete this->produto;
+    cout << "Item de pedido deletado." << endl;
 }
 
 int ItemDePedido::getQuantidade()
