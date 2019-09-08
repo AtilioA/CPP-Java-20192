@@ -6,8 +6,8 @@ private:
     int ano;
     int semestre;
     Professor prof;
-    // Date dtInicio;
-    // Date dtFim;
+    // tm dtInicio;
+    // tm dtFim;
     static int qtdTurmas;
 public:
     Turma(/* args */);

@@ -1,10 +1,17 @@
+#ifndef _FUNCIONARIO_
+#define _FUNCIONARIO_
 #include <iostream>
+#include <string>
+// #include <vector>
+#include <ctime>
+
+using namespace std;
 
 class Funcionario
 {
     private:
         string nome;
-        Date dataNascimento;
+        tm dataNascimento;
         string RG;
         string CPF;
         string endereco;
@@ -20,8 +27,8 @@ class Funcionario
         void setMatricula(string matricula);
         string getNome();
         void setNome(string nome);
-        Date getDataNascimento();
-        void setDataNascimento(Date dataNascimento);
+        tm getDataNascimento();
+        void setDataNascimento(tm dataNascimento);
         string getRG();
         void setRG(string RG);
         void setEmail(string email);
@@ -33,3 +40,5 @@ class Funcionario
         void setCPF(string CPF);
         string getCPF();
 };
+
+#endif

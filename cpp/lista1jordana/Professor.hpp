@@ -8,8 +8,8 @@
 class Professor
 {
 private:
-    Date dataAdmissao;
-    Date dataDemissao;
+    tm dataAdmissao;
+    tm dataDemissao;
     string CPF;
     string RG;
     string endereco;
@@ -19,10 +19,10 @@ private:
     static int qtdProfessores;
 
 public:
-    Date Professor::getDataAdmissao();
-    void Professor::setDataAdmissao(Date dataAdmissao);
-    Date Professor::getDataDemissao();
-    void Professor::setDataDemissao(Date dataDemissao);
+    tm Professor::getDataAdmissao();
+    void Professor::setDataAdmissao(tm dataAdmissao);
+    tm Professor::getDataDemissao();
+    void Professor::setDataDemissao(tm dataDemissao);
     string Professor::getCPF();
     void Professor::setCPF(string CPF);
     string Professor::getRG();

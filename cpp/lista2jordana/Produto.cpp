@@ -1,59 +1,53 @@
-#include <iostream>
+#include "Produto.hpp"
 
-~Produto()
-Produto()
-
-void Produto::setCodigo(int codigo)
+Produto::Produto()
 {
-    this.codigo = codigo;
+    this->qtdProdutos++;
+    cout << "Produto criado." << endl;
+}
+
+Produto::~Produto()
+{
+    Produto::qtdProdutos--;
+    cout << "Produto deletado." << endl;
 }
 
 string Produto::getNome()
 {
-    return this.nome;
+    return this->nome;
 }
 
 void Produto::setNome(string nome)
 {
-    this.nome = nome;
+    this->nome = nome;
 }
 
 string Produto::getDescricao()
 {
-    return this.descricao;
+    return this->descricao;
 }
 
 void Produto::setDescricao(string descricao)
 {
-    this.descricao = descricao;
+    this->descricao = descricao;
 }
 
 int Produto::getQtdEstoque()
 {
-    return this.qtdEstoque;
+    return this->qtdEstoque;
 }
 
 void Produto::setQtdEstoque(int qtdEstoque)
 {
-    this.qtdEstoque = qtdEstoque;
+    this->qtdEstoque = qtdEstoque;
 }
 
 int Produto::getPrecoBase()
 {
-    return this.precoBase;
+    return this->precoBase;
 }
 
-void Produto::setPrecoBase(int precoBase)
+void Produto::setPrecoBase(float precoBase)
 {
-    this.precoBase = precoBase;
-}
-
-int Produto::getQtdProdutos()
-{
-    return this.qtdProdutos;
-}
-
-void Produto::setQtdProdutos(int qtdProdutos)
-{
-    this.qtdProdutos = qtdProdutos;
+    this->precoBase = precoBase;
 }

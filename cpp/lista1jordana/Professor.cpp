@@ -14,22 +14,22 @@ Professor::~Professor()
 }
 
 
-	Date getDataAdmissao()
+	tm getDataAdmissao()
     {
 		return this.dataAdmissao;
 	}
 
-	void setDataAdmissao(Date dataAdmissao)
+	void setDataAdmissao(tm dataAdmissao)
     {
 		this.dataAdmissao = dataAdmissao;
 	}
 
-	Date getDataDemissao()
+	tm getDataDemissao()
     {
 		return this.dataDemissao;
 	}
 
-	void setDataDemissao(Date dataDemissao)
+	void setDataDemissao(tm dataDemissao)
     {
 		this.dataDemissao = dataDemissao;
 	}
