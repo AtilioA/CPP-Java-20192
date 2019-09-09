@@ -20,7 +20,7 @@ class Funcionario
         string matricula;
 
     public:
-        Funcionario();
+        Funcionario(string nome, string matricula, string RG, string CPF, string end, string tel, string email);
         ~Funcionario();
 
         string getMatricula();

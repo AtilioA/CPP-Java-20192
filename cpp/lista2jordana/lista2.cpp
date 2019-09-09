@@ -16,20 +16,20 @@ int main()
     Funcionario *fun;
     Pedido *ped;
     Produto *prod;
-    ItemDePedido *itemPed;
+    vector<ItemDePedido *> itemPed;
 
     cout << "Testando inicializacao de objetos.\n" << endl;
 
-    cli = new Cliente();
+    cli = new Cliente("Tiaguin", "168", "59", "rua", "777", "_battlenet");
     cli->setNome("Renan");
-    prod = new Produto();
+    prod = new Produto(2832, "V5", "gel", 10);
     prod->setNome("docin");
     prod->setCodigo(2832);
-    fun = new Funcionario();
+    fun = new Funcionario("Tiaguin", "2832", "168", "59", "rua", "777", "_battlenet");
     fun->setNome("Tiaguin");
 
-    itemPed = new ItemDePedido(prod);
-    ped = new Pedido(fun, itemPed);
+    // itemPed = new vector<ItemDePedido *>;
+    ped = new Pedido(fun, itemPed, "Aguardando");
     cli->adicionarPedido(ped);
 
     cout << "Funcionario encarregado pelo primeiro pedido do cliente " << cli->getNome() << ": " << cli->getPedidos()->at(0)->getFuncionario()->getNome() << endl;

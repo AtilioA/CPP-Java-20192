@@ -1,8 +1,17 @@
 #include "Cliente.hpp"
 
-Cliente::Cliente()
+Cliente::Cliente(string nome, string RG, string CPF, string end, string tel, string email)
 {
     this->pedidos = new vector<Pedido *>;
+
+    this->setNome(nome);
+    // this->setDataNascimento(dataNasc);
+    this->setRG(RG);
+    this->setCPF(CPF);
+    this->setEndereco(end);
+    this->setTelefone(tel);
+    this->setEmail(email);
+
     cout << "Cliente criado." << endl;
 }
 

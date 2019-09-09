@@ -22,7 +22,8 @@ private:
 
 public:
     static int qtdPedidos;
-    Pedido(Funcionario *fun, ItemDePedido *ped);
+    // Pedido(Funcionario *fun, ItemDePedido *ped);
+    Pedido(Funcionario *fun, vector<ItemDePedido *> ped, string formaPgto);
     ~Pedido();
 
     float getValorTotal();
@@ -37,6 +38,7 @@ public:
     void setQtdPedidos(int qtdPedidos);
     void adicionarItens(ItemDePedido *ped);
     vector<ItemDePedido *> *getItensDePedido();
+    void setFuncionario(Funcionario *fun);
     Funcionario *getFuncionario();
 };
 

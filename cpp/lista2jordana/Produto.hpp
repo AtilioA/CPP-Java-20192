@@ -18,8 +18,8 @@ private:
 
 public:
     static int qtdProdutos;
+    Produto(int codigo, string nome, string descricao, int qtd);
     ~Produto();
-    Produto();
 
     int getCodigo();
     void setCodigo(int codigo);

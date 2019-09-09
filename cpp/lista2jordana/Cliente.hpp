@@ -21,7 +21,7 @@ private:
     vector<Pedido *> *pedidos;
 
 public:
-    Cliente();
+    Cliente(string nome, string RG, string CPF, string end, string tel, string email);
     ~Cliente();
 
     string getNome();

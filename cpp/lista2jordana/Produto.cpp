@@ -1,7 +1,12 @@
 #include "Produto.hpp"
 
-Produto::Produto()
+Produto::Produto(int codigo, string nome, string descricao, int qtd)
 {
+    this->setCodigo(codigo);
+    this->setNome(nome);
+    this->setDescricao(descricao);
+    this->setQtdEstoque(qtd);
+
     this->qtdProdutos++;
     cout << "Produto criado." << endl;
 }

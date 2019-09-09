@@ -1,18 +1,40 @@
+#include <string.h>
 #include "Pedido.hpp"
 
-Pedido::Pedido(Funcionario *fun, ItemDePedido *ped)
+Pedido::Pedido(Funcionario *fun, vector<ItemDePedido *> ped, string formaPgto)
 {
-    this->funcionario = fun;
+    this->setFuncionario(fun);
+    this->setFormaPgto(formaPgto);
+
     this->itens = new vector<ItemDePedido *>;
-    this->itens->push_back(ped);
+    int qtdItens = ped.size();
+    for (int i = 0; i < qtdItens; i++)
+    {
+        this->itens->push_back(ped[i]);
+
+        if (ped[i]->getProduto()->getQtdEstoque() > 0)
+        {
+            if (formaPgto.compare("Aguardando") == 0)
+            {
+                this->setStatus("Pedido aguardando pagamento");
+            }
+            else
+            {
+                this->setStatus("Pedido registrado");
+            }
+        }
+        else
+        {
+            this->setStatus("Pedido aguardando estoque");
+        }
+    }
 
     Pedido::qtdPedidos++;
-    cout << "Novo pedido." << endl;
+    cout << "Novo pedido criado." << endl;
 }
 
 Pedido::~Pedido()
 {
-    // delete this->funcionario;
     int tamItens = this->itens->size();
     for (int i = 0; i < tamItens; i++)
     {
@@ -82,6 +104,11 @@ void Pedido::adicionarItens(ItemDePedido *ped)
 vector<ItemDePedido *> *Pedido::getItensDePedido()
 {
     return this->itens;
+}
+
+void Pedido::setFuncionario(Funcionario *fun)
+{
+    this->funcionario = fun;
 }
 
 Funcionario *Pedido::getFuncionario()
