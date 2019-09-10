@@ -11,35 +11,24 @@ using namespace std;
 class Cliente
 {
 private:
-    string nome;
-    tm dataNascimento;
-    string RG;
-    string CPF;
     string endereco;
     string telefone;
     string email;
     vector<Pedido *> *pedidos;
 
 public:
-    Cliente(string nome, string RG, string CPF, string end, string tel, string email);
+    Cliente(string end, string tel, string email);
     ~Cliente();
 
-    string getNome();
-    void setNome(string nome);
-    tm getDataNascimento();
-    void setDataNascimento(tm dataNascimento);
-    string getRG();
-    void setRG(string RG);
     void setEmail(string email);
     string getEmail();
     void setTelefone(string telefone);
     string getTelefone();
     void setEndereco(string endereco);
     string getEndereco();
-    void setCPF(string CPF);
-    string getCPF();
-    vector<Pedido *> *getPedidos();
+
     void adicionarPedido(Pedido *pedido);
+    vector<Pedido *> *getPedidos();
 };
 
 #endif

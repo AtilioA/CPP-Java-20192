@@ -4,10 +4,6 @@ Cliente::Cliente(string nome, string RG, string CPF, string end, string tel, str
 {
     this->pedidos = new vector<Pedido *>;
 
-    this->setNome(nome);
-    // this->setDataNascimento(dataNasc);
-    this->setRG(RG);
-    this->setCPF(CPF);
     this->setEndereco(end);
     this->setTelefone(tel);
     this->setEmail(email);
@@ -25,46 +21,6 @@ Cliente::~Cliente()
     delete this->pedidos;
 
     cout << "Cliente deletado." << endl;
-}
-
-string Cliente::getNome()
-{
-    return this->nome;
-}
-
-void Cliente::setNome(string nome)
-{
-    this->nome = nome;
-}
-
-tm Cliente::getDataNascimento()
-{
-    return this->dataNascimento;
-}
-
-void Cliente::setDataNascimento(tm dataNas)
-{
-    this->dataNascimento = dataNas;
-}
-
-string Cliente::getRG()
-{
-    return this->RG;
-}
-
-void Cliente::setRG(string RG)
-{
-    this->RG = RG;
-}
-
-string Cliente::getCPF()
-{
-    return this->CPF;
-}
-
-void Cliente::setCPF(string CPF)
-{
-    this->CPF = CPF;
 }
 
 string Cliente::getEndereco()
