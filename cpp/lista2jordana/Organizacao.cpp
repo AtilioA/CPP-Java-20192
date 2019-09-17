@@ -18,16 +18,6 @@ void Organizacao::setNomeFantasia(string nomeFantasia)
     this->nomeFantasia = nomeFantasia;
 }
 
-tm Organizacao::getDataNascimento()
-{
-    return this->dataNascimento;
-}
-
-void Organizacao::setDataNascimento(tm dataNas)
-{
-    this->dataNascimento = dataNas;
-}
-
 string Organizacao::getRazaoSocial()
 {
     return this->razaoSocial;

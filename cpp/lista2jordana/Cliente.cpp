@@ -1,6 +1,6 @@
 #include "Cliente.hpp"
 
-Cliente::Cliente(string nome, string RG, string CPF, string end, string tel, string email)
+Cliente::Cliente(string end, string tel, string email)
 {
     this->pedidos = new vector<Pedido *>;
 

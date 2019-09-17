@@ -20,19 +20,13 @@ int main()
 
     cout << "Testando inicializacao de objetos.\n" << endl;
 
-    cli = new Cliente("Tiaguin", "168", "59", "rua", "777", "_battlenet");
-    cli->setNome("Renan");
-    prod = new Produto(2832, "V5", "gel", 10);
-    prod->setNome("docin");
-    prod->setCodigo(2832);
+    cli = new Cliente("rua", "777", "_battlenet");
     fun = new Funcionario("Tiaguin", "2832", "168", "59", "rua", "777", "_battlenet");
-    fun->setNome("Tiaguin");
 
-    // itemPed = new vector<ItemDePedido *>;
     ped = new Pedido(fun, itemPed, "Aguardando");
     cli->adicionarPedido(ped);
 
-    cout << "Funcionario encarregado pelo primeiro pedido do cliente " << cli->getNome() << ": " << cli->getPedidos()->at(0)->getFuncionario()->getNome() << endl;
+    // cout << "Funcionario encarregado pelo primeiro pedido do cliente " << cli->getNome() << ": " << cli->getPedidos()->at(0)->getFuncionario()->getNome() << endl;
 
     cout << "\nDeletando objetos..." << endl;
     delete cli;
