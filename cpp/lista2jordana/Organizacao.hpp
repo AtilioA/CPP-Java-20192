@@ -25,6 +25,6 @@ public:
     void setRazaoSocial(string razaoSocial);
     string getCNPJ();
     void setCNPJ(string CNPJ);
-}
+};
 
 #endif

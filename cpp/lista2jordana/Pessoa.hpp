@@ -27,6 +27,6 @@ public:
     void setRG(string RG);
     void setCPF(string CPF);
     string getCPF();
-}
+};
 
 #endif
