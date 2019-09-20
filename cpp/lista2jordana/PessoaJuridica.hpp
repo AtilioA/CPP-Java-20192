@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class PessoaJuridica: Pessoa, Organizacao
+class PessoaJuridica: Cliente, Organizacao
 {
 public:
     PessoaJuridica(string nomeFantasia, string razaoSocial, string CNPJ, string end, string tel, string email);
