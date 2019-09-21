@@ -20,7 +20,7 @@ int main()
     pessoa = new Pessoa("Renan", nasci, "12345678900", "12345123");
     conta = new Conta("2832", "1", 7000);
 
-    cout << pessoa->getDataNasc().tm_mon << endl;
+    // cout << pessoa->getDataNasc().tm_mon << endl;
 
     cout << conta->getSaldo() << endl;
     cout << conta->getNumConta() << endl;
@@ -28,12 +28,15 @@ int main()
 
     cout << "Depositando 500 reais..." << endl;
     conta->deposito(500);
-    cout << "Saldo após depósito: " << conta->extrato() << endl;
+    cout << "Saldo apos deposito: " << conta->getSaldo() << endl;
 
 
     cout << "Retirando 1250 reais..." << endl;
     conta->retirada(1250);
-    cout << "Saldo após retirada: " << conta->extrato() << endl;
+    cout << "Saldo apos retirada: " << conta->getSaldo() << endl;
+
+    cout << "\nNumero de movimentacoes: " << conta->getTransacoes()->size() << endl;
+    // conta->printaExtrato();
 
     delete pessoa;
     delete conta;

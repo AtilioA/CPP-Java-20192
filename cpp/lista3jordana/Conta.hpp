@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Transacao.hpp"
+#include <time.h>
 
 using namespace std;
 
@@ -12,11 +14,12 @@ class Conta
         string numConta;
         string agencia;
         float saldo;
-        // <vector *>Transacao trasacao;
+        vector<Transacao *> *transacoes;
 
     public:
         Conta(string numConta, string agencia, float saldo);
         ~Conta();
+        void registraTransacao(float valor, string descricao);
         void deposito(float valor);
         void retirada(float valor);
         float extrato();
@@ -26,6 +29,9 @@ class Conta
         void setAgencia(string agencia);
         float getSaldo();
         void setSaldo(float saldo);
+        vector<Transacao *> *getTransacoes();
+        void printaExtrato();
+        void fodase();
 };
 
 #endif

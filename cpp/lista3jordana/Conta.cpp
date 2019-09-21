@@ -9,7 +9,7 @@ Conta::Conta(string numConta, string agencia, float saldo)
 
 Conta::~Conta()
 {
-
+    cout << "Conta deletada." << endl;
 }
 
 string Conta::getNumConta()
@@ -42,17 +42,39 @@ void Conta::setSaldo(float saldo)
     this->saldo = saldo;
 }
 
+void Conta::registraTransacao(float valor, string descricao)
+{
+    Transacao *nova;
+
+    time_t t = time(0);
+    tm *data = localtime(&t);
+
+    nova = new Transacao(*data, valor, descricao);
+    // this->getTransacoes()->push_back(nova); // não está inserindo
+    cout << "Transacao registrada." << endl;
+}
+
 void Conta::deposito(float valor)
 {
     this->setSaldo(this->getSaldo() + valor);
+    this->registraTransacao(valor, "deposito");
 }
 
 void Conta::retirada(float valor)
 {
     this->setSaldo(this->getSaldo() - valor);
+    this->registraTransacao(valor, "retirada");
 }
 
-float Conta::extrato()
+vector<Transacao *> *Conta::getTransacoes()
 {
-    this->getSaldo();
+    return this->transacoes;
 }
+
+// void Conta::printaExtrato()
+// {
+//     for (int i = 0; i < this->getTransacoes()->size(); i++)
+//     {
+//         cout << this->getTransacoes()->at(i) << endl;
+//     }
+// }
