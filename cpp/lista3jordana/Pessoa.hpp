@@ -17,7 +17,6 @@ class Pessoa
     public:
         Pessoa(string nome, tm dataNasc, string CPF, string RG);
         ~Pessoa();
-
         string getNome();
         void setNome(string nome);
         tm getDataNasc();

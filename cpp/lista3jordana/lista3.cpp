@@ -3,15 +3,18 @@
 #include <string>
 #include "Pessoa.hpp"
 #include "Conta.hpp"
+// #include "Correntista.hpp"
+#include "PessoaFisica.hpp"
+// #include "PessoaJuridica.hpp"
 
 using namespace std;
 
 int main()
 {
-    cout << "leakando brabamente" << endl;
     Pessoa *pessoa;
     tm nasci;
     Conta *conta;
+    PessoaFisica *pf;
 
     nasci.tm_year = 1900 + 118;
     nasci.tm_mon = 10;
@@ -19,6 +22,7 @@ int main()
 
     pessoa = new Pessoa("Renan", nasci, "12345678900", "12345123");
     conta = new Conta("2832", "1", 7000);
+    pf = new PessoaFisica("Renan", nasci, "12345678900", "12345123", "rua", "27", "atiliodadalto"/*, *conta*/);
 
     // cout << pessoa->getDataNasc().tm_mon << endl;
 
@@ -35,11 +39,14 @@ int main()
     conta->retirada(1250);
     cout << "Saldo apos retirada: " << conta->getSaldo() << endl;
 
-    cout << "\nNumero de movimentacoes: " << conta->getTransacoes()->size() << endl;
+    // cout << "\nNumero de movimentacoes: " << conta->getTransacoes()->size() << endl;
     // conta->printaExtrato();
+
+    // cout << pf->getEndereco() << pf->getTelefone() << pf->getCPF() << pf->getEmail() << pf->getNome() << endl;
 
     delete pessoa;
     delete conta;
+    delete pf;
 
     return 0;
 }
