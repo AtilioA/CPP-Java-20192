@@ -10,10 +10,6 @@ class Cubo: public Forma3D
     private:
         double lado;
 
-    double getLado() {
-        return lado;
-    }
-
     public:
         Cubo(double lado);
         double getLado();
